@@ -1,3 +1,4 @@
+from pywhatkit.mainfunctions import search
 import speech_recognition as sr
 import pyttsx3
 import pywhatkit
@@ -32,9 +33,14 @@ def listen():
 def run():
     rec = listen()
     if "reproduce" in rec:
-        music = rec.replace("reproduce", "")
+        music = rec.replace("reproduce", "reproduceme", "cargame", "carga" "")
         talk("Reproduciendo" + music)
         pywhatkit.playonyt(music)
+
+    if "busca" in rec:
+        search = rec.replaace("busca" "")
+        talk("Buscando" + search)
+        pywhatkit.playonyt(search)
 
 run()
 
