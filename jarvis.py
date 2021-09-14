@@ -5,11 +5,6 @@ listener = sr.Recognizer()
 
 engine = pyttsx3.init()
 
-voices = engine.getProperty("voices")
-engine.setProperty("voice", voices[1].id)
-
-engine.say("Buenos días Rafael")
-engine.runAndWait()
 
 try:
     with sr.Microphone() as source:
@@ -17,5 +12,16 @@ try:
         voice = listener.listen(source)
         rec = listener.recognize_google(voice)
         print(rec)
+        
 except:
     pass
+
+
+voices = engine.getProperty("voices")
+engine.setProperty("voice", voices[1].id)
+
+engine.say("Buenas noches Rafael")
+engine.runAndWait()
+
+
+
